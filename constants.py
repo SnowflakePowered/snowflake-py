@@ -1,0 +1,1 @@
+key_boxarts = "ICELAKE_IMG_GAME_BOXARTS"
