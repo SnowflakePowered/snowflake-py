@@ -2,7 +2,7 @@ import sqlite3
 import json
 import os
 import shortuuid
-from datastructures import GameInfo
+from games import GameInfo
 
 
 class GamesDatabase():

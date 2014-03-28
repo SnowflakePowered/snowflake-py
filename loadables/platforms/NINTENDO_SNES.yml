@@ -1,4 +1,4 @@
-!!python/object:datastructures.PlatformInfo
+!!python/object:platforms.PlatformInfo
 platform_id: NINTENDO_SNES
 commandline: somecommandline
 company: Nintendo

@@ -1,7 +1,8 @@
 #coding=utf-8
+from collections import namedtuple
 import difflib
 import imp
-import os.path
+
 __author__ = 'ron975'
 """
 This file is part of Snowflake.Core
@@ -35,11 +36,6 @@ def get_best_search_result(game_list, game_name):
     return best_match
 
 
-def get_match_by_threshold(game_dict, game_name, match_threshold):
-
-    return
-
-
 def format_html_codes(s):
     """
     :author: Angelscry
@@ -59,3 +55,13 @@ def format_html_codes(s):
     s = s.replace('&#xB0;', "°")
     s = s.replace('\xe2\x80\x99', "'")
     return s
+
+
+class SearchResult(namedtuple('SearchResult', 'game_title source_id')):
+    pass
+
+
+class ScraperInfo:
+    def __init__(self, name, filename):
+        self.name = name
+        self.scraper = imp.load_source('.'.join(['snowflake', 'scraper', name]), filename)

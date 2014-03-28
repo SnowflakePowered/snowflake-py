@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/snowflake$playground.coverage" NAME="playground Coverage Results" MODIFIED="1395948271931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/snowflake$playground.coverage" NAME="playground Coverage Results" MODIFIED="1395966437502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -31,42 +31,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="datastructures.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datastructures.py">
+      <file leaf-file-name="games.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/games.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="32" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0" vertical-offset="689" max-vertical-offset="1190">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="platforms.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platforms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="31" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="578">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scrapercommon.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrapercommon.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="30" selection-start="1931" selection-end="1931" vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1224">
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#14#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="thegamesdb.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loadables/scrapers/thegamesdb.yml">
+      <file leaf-file-name="singleton.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/singleton.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+            <state line="1" column="78" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="scraper.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py">
+        <entry file="file://$PROJECT_DIR$/loadables/scrapers/scraperbase/scraper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="20" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="2329">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scrape_engine.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrape_engine.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="3" selection-start="120" selection-end="120" vertical-scroll-proportion="23.12" vertical-offset="697" max-vertical-offset="1122">
-              <folding>
-                <element signature="e#14#28#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -74,7 +81,7 @@
       <file leaf-file-name="loadables.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loadables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="23" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+            <state line="21" column="15" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -82,10 +89,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NINTENDO_SNES.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="constants.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/constants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="40" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NINTENDO_SNES.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loadables/platforms/NINTENDO_SNES.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="15" selection-start="241" selection-end="241" vertical-scroll-proportion="0.30222222" vertical-offset="0" max-vertical-offset="450">
+            <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
               <folding />
             </state>
           </provider>
@@ -94,40 +110,19 @@
       <file leaf-file-name="playground.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playground.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scrapermap.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scrapermap.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="20" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="527">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="games" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/fda7fe96/aefa666e-d463-4565-b8df-3c2a1da5a2ee/..games">
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="database.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="19" selection-start="2253" selection-end="2253" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="1139">
+            <state line="26" column="73" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="595">
               <folding>
-                <marker date="1395721743253" expanded="true" signature="302:944" placeholder="CREATE TABLE..games..." />
+                <element signature="e#35#46#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="retroarch.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/loadables/emulators/retroarch.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,21 +145,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/scrapers/thegamesdb/scrapermap.yml" />
-        <option value="$PROJECT_DIR$/platforms/NINTENDO_SNES.yml" />
-        <option value="$PROJECT_DIR$/constants.py" />
-        <option value="$PROJECT_DIR$/scrapers/scraperbase/scraper.py" />
-        <option value="db-console:/fda7fe96/aefa666e-d463-4565-b8df-3c2a1da5a2ee/" />
-        <option value="dbtable:/fda7fe96/aefa666e-d463-4565-b8df-3c2a1da5a2ee/..games" />
-        <option value="$PROJECT_DIR$/identifiers.py" />
-        <option value="$PROJECT_DIR$/scrapers/thegamesdb/scraper.py" />
-        <option value="$PROJECT_DIR$/database.py" />
         <option value="$PROJECT_DIR$/scrapers/thegamesdb/scraper.yml" />
         <option value="$PROJECT_DIR$/scrapers/thegamedb.yml" />
-        <option value="$PROJECT_DIR$/datastructures.py" />
         <option value="$PROJECT_DIR$/scrapers/thegamesdb.yml" />
         <option value="$PROJECT_DIR$/scrape_engine.py" />
         <option value="$PROJECT_DIR$/loader.py" />
+        <option value="$PROJECT_DIR$/singleton.py" />
+        <option value="$PROJECT_DIR$/constants.py" />
+        <option value="$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py" />
+        <option value="$PROJECT_DIR$/loadables/scrapers/thegamesdb/scrapermap.yml" />
+        <option value="$PROJECT_DIR$/loadables/scrapers/scraperbase/scrapermap.yml" />
+        <option value="$PROJECT_DIR$/loadables.py" />
+        <option value="$PROJECT_DIR$/runnables.py" />
+        <option value="$PROJECT_DIR$/datastructures.py" />
+        <option value="$PROJECT_DIR$/loadables/platforms/NINTENDO_SNES.yml" />
+        <option value="$PROJECT_DIR$/scrapercommon.py" />
         <option value="$PROJECT_DIR$/playground.py" />
       </list>
     </option>
@@ -220,6 +215,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,6 +247,10 @@
               <option name="myItemId" value="loadables" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -266,26 +266,84 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="platforms" />
+              <option name="myItemId" value="scrapers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thegamesdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snowflake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snowflake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loadables" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scraperbase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snowflake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snowflake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loadables" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snowflake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snowflake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loadables" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="emulators" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -406,9 +464,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -430,6 +485,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -550,17 +608,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py</url>
-          <line>115</line>
+          <line>117</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py</url>
-          <line>130</line>
+          <line>132</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py</url>
-          <line>80</line>
+          <line>82</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
@@ -574,79 +632,43 @@
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/scrape_engine.py</url>
-          <line>1</line>
+          <url>file://$PROJECT_DIR$/scrapercommon.py</url>
+          <line>2</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/loadables.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/loadables.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/loadables.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="35" />
+      <option name="time" value="41" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Python27/Lib/json/encoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="0" selection-start="6815" selection-end="6815" vertical-scroll-proportion="0.0" vertical-offset="2979" max-vertical-offset="7718" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/fda7fe96/aefa666e-d463-4565-b8df-3c2a1da5a2ee/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/identifiers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="81" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="19" selection-start="2253" selection-end="2253" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1207">
-          <folding>
-            <marker date="1395721743253" expanded="true" signature="302:944" placeholder="CREATE TABLE..games..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/fda7fe96/aefa666e-d463-4565-b8df-3c2a1da5a2ee/..games">
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102" />
       </provider>
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scrapermap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="20" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="527">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loadables/scrapers/thegamesdb.yml">
@@ -656,50 +678,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datastructures.py">
+    <entry file="file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scrapermap.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="32" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1190">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state line="8" column="25" selection-start="0" selection-end="657" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrape_engine.py">
+    <entry file="file://$PROJECT_DIR$/loadables/scrapers/scraperbase/scrapermap.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="120" selection-end="120" vertical-scroll-proportion="23.12" vertical-offset="697" max-vertical-offset="1122">
-          <folding>
-            <element signature="e#14#28#0" expanded="true" />
-          </folding>
+        <state line="22" column="8" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="20" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="2329">
+        <state line="55" column="80" selection-start="1930" selection-end="1980" vertical-scroll-proportion="0.0" vertical-offset="712" max-vertical-offset="2261">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/playground.py">
+    <entry file="file://$PROJECT_DIR$/platforms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+        <state line="2" column="31" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loadables/platforms/NINTENDO_SNES.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapercommon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="30" selection-start="1931" selection-end="1931" vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1224">
+          <folding>
+            <element signature="e#14#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/singleton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="78" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/games.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loadables/scrapers/scraperbase/scraper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loadables.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+        <state line="21" column="15" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loadables/platforms/NINTENDO_SNES.yml">
+    <entry file="file://$PROJECT_DIR$/constants.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="15" selection-start="241" selection-end="241" vertical-scroll-proportion="0.30222222" vertical-offset="0" max-vertical-offset="450">
+        <state line="1" column="40" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playground.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="73" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="595">
+          <folding>
+            <element signature="e#35#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loadables/emulators/retroarch.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
           <folding />
         </state>
       </provider>
