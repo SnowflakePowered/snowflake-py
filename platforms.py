@@ -20,10 +20,10 @@ class PlatformInfo:
 
 
 class EmulatorInfo:
-    def __init__(self, emulator_name, emulator_path, emulator_config):
-        self.emulator_name = emulator_name
-        self.emulator_path = emulator_path
-        self.emulator_config = emulator_config
+    def __init__(self, name, executable, config):
+        self.name = name
+        self.executable = executable
+        self.config = config
 
     def execute_rom(self, commandline):
-        subprocess.call(self.emulator_path, commandline)
+        subprocess.call(self.executable, commandline)

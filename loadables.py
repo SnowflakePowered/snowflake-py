@@ -11,6 +11,7 @@ class Loadables:
         self.platforms = self.load_platforms()
 
     def load_scrapers(self):
+        #load scrapers from yml files
         scraperdef = self.get_loadables("scrapers")
         scrapers = {}
         for scraper in scraperdef[0]:
@@ -19,6 +20,7 @@ class Loadables:
         return scrapers
 
     def load_platforms(self):
+        #load platforms from yml file
         platformdef = self.get_loadables("platforms")
         platforms = {}
         for platform in platformdef[0]:
@@ -27,5 +29,6 @@ class Loadables:
         return platforms
 
     def get_loadables(self, type, ext='yml'):
+        #get yml loadables
         loadablesdir = os.path.join(os.getcwd(), "loadables", type)
-        return (glob.glob(os.path.join(loadablesdir, '*.'+ext)), loadablesdir)
+        return glob.glob(os.path.join(loadablesdir, '*.'+ext)), loadablesdir

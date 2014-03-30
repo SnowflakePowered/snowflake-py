@@ -1,6 +1,6 @@
 !!python/object:platforms.PlatformInfo
 platform_id: NINTENDO_SNES
-commandline: somecommandline
+commandline: '-L cores/snes9x_next_libretro.dll [ICELAKE_ROMNAME]'
 company: Nintendo
 emulator: retroarch
 file_extensions: [sfc, smc]
