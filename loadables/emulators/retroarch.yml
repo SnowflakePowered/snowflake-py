@@ -1,3 +1,4 @@
+!!python/object:platforms.EmulatorInfo
 name: retroarch
 executable: 'retroarch.exe'
 config: '.retroarch-core-options.cfg'

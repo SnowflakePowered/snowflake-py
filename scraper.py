@@ -2,6 +2,7 @@
 from collections import namedtuple
 import difflib
 import imp
+import constants
 
 __author__ = 'ron975'
 """
@@ -64,4 +65,4 @@ class SearchResult(namedtuple('SearchResult', 'game_title source_id')):
 class ScraperInfo:
     def __init__(self, name, filename):
         self.name = name
-        self.scraper = imp.load_source('.'.join(['snowflake', 'scraper', name]), filename)
+        self.scraper = imp.load_source('.'.join(['scraper', name]), filename)

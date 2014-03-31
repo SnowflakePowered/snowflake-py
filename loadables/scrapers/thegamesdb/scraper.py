@@ -1,6 +1,6 @@
 #coding=utf-8
 from games import GameInfo
-from scrapercommon import SearchResult
+from scraper import SearchResult
 
 __author__ = 'ron975'
 """
@@ -12,7 +12,7 @@ import urllib
 import re
 import os
 import yaml
-import scrapercommon
+import scraper
 import constants
 
 __scrapername__ = "TheGamesDB"
@@ -99,19 +99,19 @@ def get_game_datas(game_id):
         page = f.read().replace('\n', '')
         game_genre = ' / '.join(re.findall('<genre>(.*?)</genre>', page))
         if game_genre:
-            gamedata["genre"] = scrapercommon.format_html_codes(game_genre)
+            gamedata["genre"] = scraper.format_html_codes(game_genre)
         game_release = ''.join(re.findall('<ReleaseDate>(.*?)</ReleaseDate>', page))
         if game_release:
-            gamedata["release"] = scrapercommon.format_html_codes(game_release)
+            gamedata["release"] = scraper.format_html_codes(game_release)
         game_studio = ''.join(re.findall('<Publisher>(.*?)</Publisher>', page))
         if game_studio:
-            gamedata["publisher"] = scrapercommon.format_html_codes(game_studio)
+            gamedata["publisher"] = scraper.format_html_codes(game_studio)
         game_plot = ''.join(re.findall('<Overview>(.*?)</Overview>', page))
         if game_plot:
-            gamedata["description"] = scrapercommon.format_html_codes(game_plot)
+            gamedata["description"] = scraper.format_html_codes(game_plot)
         game_title = ''.join(re.findall('<GameTitle>(.*?)</GameTitle>', page))
         if game_title:
-            gamedata["title"] = scrapercommon.format_html_codes(game_title)
+            gamedata["title"] = scraper.format_html_codes(game_title)
         boxarts = re.findall(r'<boxart side="front" (.*?)">(.*?)</boxart>', page)[0][1]
         boxarts = "http://thegamesdb.net/banners/" + boxarts
 

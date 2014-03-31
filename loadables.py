@@ -1,14 +1,17 @@
 import os
 import glob
 import yaml
-from scrapercommon import ScraperInfo
+from scraper import ScraperInfo
 from singleton import Singleton
+import constants
+
 
 @Singleton
 class Loadables:
     def __init__(self):
         self.scrapers = self.load_scrapers()
         self.platforms = self.load_platforms()
+        self.emulators = self.load_emulators()
 
     def load_scrapers(self):
         #load scrapers from yml files
@@ -28,7 +31,15 @@ class Loadables:
             platforms[info.platform_id] = info
         return platforms
 
+    def load_emulators(self):
+        emulatordef = self.get_loadables("emulators")
+        emulators = {}
+        for emulator in emulatordef[0]:
+            info = yaml.load(open(emulator))
+            emulators[info.name] = info
+        return emulators
+
     def get_loadables(self, type, ext='yml'):
         #get yml loadables
-        loadablesdir = os.path.join(os.getcwd(), "loadables", type)
+        loadablesdir = os.path.join(constants.loadables_path, type)
         return glob.glob(os.path.join(loadablesdir, '*.'+ext)), loadablesdir

@@ -7,7 +7,9 @@ import os
 import glob
 import sys
 import constants
-from scrapercommon import ScraperInfo
+from loadables import Loadables
+from platforms import EmulatorInfo
+from scraper import ScraperInfo
 
 
 def serialize():
@@ -23,7 +25,7 @@ def db():
     db.add_game(serialize(), "smw_somefilename.smc")
 
 def main():
-    import platforms
-    print constants.loadables.platforms[platforms.NINTENDO_SNES].__dict__
-
+    loadables = Loadables.Instance()
+    snes = loadables.platforms["NINTENDO_SNES"]
+    loadables.emulators["retroarch"].execute_rom(snes.commandline, "smw.smc")
 main()
