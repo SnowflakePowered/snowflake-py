@@ -28,6 +28,14 @@ class EmulatorInfo:
         self.config = config
 
     def execute_rom(self, commandline, filename):
-        #subprocess.call(self.executable, commandline)
-        print ' '.join([os.path.join(constants.loadables_path,'emulators',self.name,self.executable), commandline.replace('[ICELAKE_ROMNAME]', filename)])
+        commandline = ' '.join([os.path.join(constants.loadables_path, 'emulators', self.name, self.executable), commandline.replace('[ICELAKE_ROMNAME]', filename)])
+        subprocess.Popen(
+            commandline.split(),
+            cwd=os.path.join(constants.loadables_path, 'emulators', self.name),
+            shell=False
+        )
+        print commandline
+
+
+
 

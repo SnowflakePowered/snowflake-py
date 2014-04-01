@@ -1,5 +1,5 @@
 import json
-
+from loadables import Loadables
 
 class RunnableGame():
     def __init__(self, uuid, filename, gameinfo):
@@ -8,9 +8,9 @@ class RunnableGame():
         self.gameinfo = gameinfo
 
     def run(self):
-        #platform = constants.loadables.platforms[self.gameinfo.platform] #todo load platforminfo
-        #emulator = constants.loadables.emulators[platform.emulator] #todo load emulators
-        #emulator.run(platform.commandline.replace('[rom]', self.filename))
+        platform = Loadables.Instance().platforms[self.gameinfo.platform] #todo load platforminfo
+        emulator = Loadables.Instance().emulators[platform.emulator] #todo load emulators
+        emulator.execute_rom(platform.commandline, self.filename)
         pass
 
 
@@ -25,6 +25,11 @@ class GameInfo:
         self.release_date = release_date
         self.metadata = metadata
         self.images = images
+
+    @classmethod
+    def deserialize(cls, title, publisher, description, genre, release_date, platform, images, metadata):
+        return cls(title, publisher, description, genre, release_date.split('-'), platform,
+                   json.loads(images.replace("'", '"')), json.loads(metadata.replace("'", '"')))
 
     def serialize_releasedate(self):
         return '-'.join(str(value) for value in self.release_date)

@@ -2,7 +2,7 @@ import sqlite3
 import json
 import os
 import shortuuid
-from games import GameInfo
+from games import GameInfo, RunnableGame
 
 
 class GamesDatabase():
@@ -24,6 +24,14 @@ class GamesDatabase():
                                           );'''
         )
         self.database.commit()
+    def get_game(self, uuid):
+        query = '''SELECT * FROM `games` WHERE `uuid` == "{0}"'''.format(uuid)
+        cur = self.database.cursor()
+        cur.execute(query)
+        uuid, filename, title, publisher, description, genre, release_date, platform, images, metadata = cur.fetchone()
+        print uuid, filename, title, publisher, description, genre, release_date, platform, images, metadata
+        info = GameInfo.deserialize(title, publisher, description, genre, release_date, platform, images, metadata)
+        return RunnableGame(uuid, filename, info)
 
     def add_game(self, game, filename):
         query = '''INSERT INTO games VALUES(
@@ -51,11 +59,7 @@ class GamesDatabase():
                     'metadata': game.serialize_metadata()
                 }
             )
-
-        print query
-        self.database.cursor().execute(query
-        )
-
+        self.database.cursor().execute(query)
         self.database.commit()
 
 
