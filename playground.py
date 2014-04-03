@@ -16,6 +16,7 @@ def serialize():
     snes = yaml.load(open('loadables/platforms/NINTENDO_SNES.yml'))
     print (snes.file_extensions[0])
     scraper = Loadables.Instance().scrapers['thegamesdb']
+
     res = scraper.scraper.get_games_with_system("Super Mario World", "NINTENDO_SNES")[0]
     data = scraper.scraper.get_game_datas(res.source_id)
     return data
@@ -34,4 +35,4 @@ def main():
     games[2].run()
     #snes = loadables.platforms["NINTENDO_SNES"]
     #loadables.emulators["retroarch"].execute_rom(snes.commandline, "smw.smc")
-main()
+print (serialize().__dict__)

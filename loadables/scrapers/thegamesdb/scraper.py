@@ -6,7 +6,7 @@ __author__ = 'ron975'
 This file is part of Snowflake.Core
 """
 
-import urllib
+from urllib import parse, request
 import re
 import os
 import yaml
@@ -21,13 +21,14 @@ __scraperfanarts__ = True
 __scraperpath__ = os.path.dirname(os.path.realpath(__file__))
 __scrapermap__ = yaml.load(open(os.path.join(__scraperpath__, "scrapermap.yml")))
 
+
 def get_games_by_name(search):
     results = []
     try:
-        req = urllib.request.Request('http://thegamesdb.net/api/GetGamesList.php?name='+urllib.parse.quote_plus(search))
+        req = request.Request('http://thegamesdb.net/api/GetGamesList.php?name='+parse.quote_plus(search))
         req.add_unredirected_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31')
-        f = urllib.request.urlopen(req)
-        page = f.read().replace("\n", "")
+        f = request.urlopen(req)
+        page = f.read().decode('utf-8').replace('\n','')
         games = re.findall("<Game><id>(.*?)</id><GameTitle>(.*?)</GameTitle>(.*?)<Platform>(.*?)</Platform></Game>",
                            page)
         for item in games:
@@ -43,7 +44,7 @@ def get_games_by_name(search):
             results.append(game)
         results.sort(key=lambda result: result["order"], reverse=True)
         return [SearchResult(result["title"], result["id"]) for result in results]
-    except:
+    except UnboundLocalError:
         return None
 
 
@@ -51,14 +52,14 @@ def get_games_with_system(search, system):
     scraper_sysid = __scrapermap__[system]
     results = []
     try:
-        req = urllib.request.Request('http://thegamesdb.net/api/GetGamesList.php?name='+urllib.parse.quote_plus(search)+'&platform='+urllib.parse.quote_plus(scraper_sysid))
+        req = request.Request('http://thegamesdb.net/api/GetGamesList.php?name='+parse.quote_plus(search)+'&platform='+parse.quote_plus(scraper_sysid))
         req.add_unredirected_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31')
-        f = urllib.request.urlopen(req)
-        page = f.read().replace("\n", "")
+        f = request.urlopen(req)
+        page = f.read().decode('utf-8').replace('\n','')
         if system == "Sega Genesis":
-            req = urllib.request.Request('http://thegamesdb.net/api/GetGamesList.php?name='+urllib.parse.quote_plus(search)+'&platform='+urllib.parse.quote_plus('Sega Mega Drive'))
+            req = request.Request('http://thegamesdb.net/api/GetGamesList.php?name='+parse.quote_plus(search)+'&platform='+parse.quote_plus('Sega Mega Drive'))
             req.add_unredirected_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31')
-            f2 = urllib.request.urlopen(req)
+            f2 = request.urlopen(req)
             page = page + f2.read().replace("\n", "")
         games = re.findall("<Game><id>(.*?)</id><GameTitle>(.*?)</GameTitle>(.*?)<Platform>(.*?)</Platform></Game>",
                            page)
@@ -91,10 +92,10 @@ def get_game_datas(game_id):
     }
 
     try:
-        req = urllib.request.Request("http://thegamesdb.net/api/GetGame.php?id=" + game_id)
+        req = request.Request("http://thegamesdb.net/api/GetGame.php?id=" + game_id)
         req.add_unredirected_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31')
-        f = urllib.request.urlopen(req)
-        page = f.read().replace('\n', '')
+        f = request.urlopen(req)
+        page = f.read().decode('utf-8').replace('\n','')
         game_genre = ' / '.join(re.findall('<genre>(.*?)</genre>', page))
         if game_genre:
             gamedata["genre"] = scraper.format_html_codes(game_genre)
