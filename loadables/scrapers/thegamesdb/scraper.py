@@ -1,13 +1,11 @@
 #coding=utf-8
 from games import GameInfo
 from scraper import SearchResult
-
 __author__ = 'ron975'
 """
 This file is part of Snowflake.Core
 """
 
-import urllib2
 import urllib
 import re
 import os
@@ -26,9 +24,9 @@ __scrapermap__ = yaml.load(open(os.path.join(__scraperpath__, "scrapermap.yml"))
 def get_games_by_name(search):
     results = []
     try:
-        req = urllib2.Request('http://thegamesdb.net/api/GetGamesList.php?name='+urllib.quote_plus(search))
+        req = urllib.request.Request('http://thegamesdb.net/api/GetGamesList.php?name='+urllib.parse.quote_plus(search))
         req.add_unredirected_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31')
-        f = urllib2.urlopen(req)
+        f = urllib.request.urlopen(req)
         page = f.read().replace("\n", "")
         games = re.findall("<Game><id>(.*?)</id><GameTitle>(.*?)</GameTitle>(.*?)<Platform>(.*?)</Platform></Game>",
                            page)
@@ -53,14 +51,14 @@ def get_games_with_system(search, system):
     scraper_sysid = __scrapermap__[system]
     results = []
     try:
-        req = urllib2.Request('http://thegamesdb.net/api/GetGamesList.php?name='+urllib.quote_plus(search)+'&platform='+urllib.quote_plus(scraper_sysid))
+        req = urllib.request.Request('http://thegamesdb.net/api/GetGamesList.php?name='+urllib.parse.quote_plus(search)+'&platform='+urllib.parse.quote_plus(scraper_sysid))
         req.add_unredirected_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31')
-        f = urllib2.urlopen(req)
+        f = urllib.request.urlopen(req)
         page = f.read().replace("\n", "")
         if system == "Sega Genesis":
-            req = urllib2.Request('http://thegamesdb.net/api/GetGamesList.php?name='+urllib.quote_plus(search)+'&platform='+urllib.quote_plus('Sega Mega Drive'))
+            req = urllib.request.Request('http://thegamesdb.net/api/GetGamesList.php?name='+urllib.parse.quote_plus(search)+'&platform='+urllib.parse.quote_plus('Sega Mega Drive'))
             req.add_unredirected_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31')
-            f2 = urllib2.urlopen(req)
+            f2 = urllib.request.urlopen(req)
             page = page + f2.read().replace("\n", "")
         games = re.findall("<Game><id>(.*?)</id><GameTitle>(.*?)</GameTitle>(.*?)<Platform>(.*?)</Platform></Game>",
                            page)
@@ -93,9 +91,9 @@ def get_game_datas(game_id):
     }
 
     try:
-        req = urllib2.Request("http://thegamesdb.net/api/GetGame.php?id=" + game_id)
+        req = urllib.request.Request("http://thegamesdb.net/api/GetGame.php?id=" + game_id)
         req.add_unredirected_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31')
-        f = urllib2.urlopen(req)
+        f = urllib.request.urlopen(req)
         page = f.read().replace('\n', '')
         game_genre = ' / '.join(re.findall('<genre>(.*?)</genre>', page))
         if game_genre:

@@ -1,9 +1,7 @@
 #coding=utf-8
 from collections import namedtuple
 import difflib
-import imp
-import constants
-
+import importlib
 __author__ = 'ron975'
 """
 This file is part of Snowflake.Core
@@ -15,7 +13,7 @@ def order_by_best_match(game_searches, game_name):
 def get_best_from_results(game_searches, game_name):
     best_match = {}
     best_ratio = 0
-    for scraper, game_search in game_searches.iteritems():
+    for scraper, game_search in list(game_searches.items()):
         try:
             if difflib.SequenceMatcher(None, game_search["title"], game_name).ratio() > best_ratio:
                 best_ratio = difflib.SequenceMatcher(None, game_search["title"], game_name).ratio()
@@ -65,4 +63,6 @@ class SearchResult(namedtuple('SearchResult', 'game_title source_id')):
 class ScraperInfo:
     def __init__(self, name, filename):
         self.name = name
-        self.scraper = imp.load_source('.'.join(['scraper', name]), filename)
+        loader = importlib.machinery.SourceFileLoader('.'.join(['scraper', name]),  filename)
+        self.scraper =  loader.load_module('.'.join(['scraper', name]))
+

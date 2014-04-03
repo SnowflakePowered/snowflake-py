@@ -1,6 +1,7 @@
 import subprocess
 import os
 import constants
+import shlex
 
 NINTENDO_SNES = "NINTENDO_SNES"
 
@@ -28,13 +29,13 @@ class EmulatorInfo:
         self.config = config
 
     def execute_rom(self, commandline, filename):
-        commandline = ' '.join([os.path.join(constants.loadables_path, 'emulators', self.name, self.executable), commandline.replace('[ICELAKE_ROMNAME]', filename)])
+        commandline = ' '.join([os.path.join(constants.loadables_path, 'emulators', self.name, self.executable),
+                                commandline.replace('[ICELAKE_ROMNAME]', filename)])
         subprocess.Popen(
-            commandline.split(),
+            shlex.split(commandline, posix=False),
             cwd=os.path.join(constants.loadables_path, 'emulators', self.name),
             shell=False
         )
-        print commandline
 
 
 

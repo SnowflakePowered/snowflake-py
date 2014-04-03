@@ -24,12 +24,20 @@ class GamesDatabase():
                                           );'''
         )
         self.database.commit()
+    def get_games_for_platform(self, platform):
+        query = '''SELECT * FROM `games` WHERE `platform` == "{0}"'''.format(platform)
+        cur = self.database.cursor()
+        cur.execute(query)
+        games = cur.fetchall()
+        return [RunnableGame(game[0], game[1],
+                             GameInfo.deserialize(game[2], game[3], game[4], game[5], game[6], game[7], game[8], game[9]))
+                for game in games]
+
     def get_game(self, uuid):
         query = '''SELECT * FROM `games` WHERE `uuid` == "{0}"'''.format(uuid)
         cur = self.database.cursor()
         cur.execute(query)
         uuid, filename, title, publisher, description, genre, release_date, platform, images, metadata = cur.fetchone()
-        print uuid, filename, title, publisher, description, genre, release_date, platform, images, metadata
         info = GameInfo.deserialize(title, publisher, description, genre, release_date, platform, images, metadata)
         return RunnableGame(uuid, filename, info)
 
