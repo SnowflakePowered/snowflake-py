@@ -9,6 +9,7 @@ import sys
 import constants
 from loadables import Loadables
 from platforms import EmulatorInfo
+import platformids
 from scraper import ScraperInfo
 
 
@@ -17,7 +18,7 @@ def serialize():
     print (snes.file_extensions[0])
     scraper = Loadables.Instance().scrapers['thegamesdb']
 
-    res = scraper.scraper.get_games_with_system("Super Mario World", "NINTENDO_SNES")[0]
+    res = scraper.scraper.get_games_with_system("Super Mario World",platformids.NINTENDO_SNES)[0]
     data = scraper.scraper.get_game_datas(res.source_id)
     return data
 

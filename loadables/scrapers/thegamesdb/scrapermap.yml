@@ -4,7 +4,7 @@ ATARI_LYNX: 'Atari Lynx'
 
 NINTENDO_NES: 'Nintendo Entertainment Console (NES)'
 NINTENDO_SNES: 'Super Nintendo (SNES)'
-NITENDO_N64: 'Nintendo 64'
+NINTENDO_N64: 'Nintendo 64'
 NINTENDO_GCN: 'Nintendo GameCube'
 NINTENDO_WII: 'Nintendo Wii'
 NINTENDO_GB: 'Nintendo Game Boy'
