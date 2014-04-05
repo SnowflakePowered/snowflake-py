@@ -8,8 +8,8 @@ class RunnableGame():
         self.gameinfo = gameinfo
 
     def run(self):
-        platform = Loadables.Instance().platforms[self.gameinfo.platform] #todo load platforminfo
-        emulator = Loadables.Instance().emulators[platform.emulator] #todo load emulators
+        platform = Loadables.Instance().platforms[self.gameinfo.platform]
+        emulator = Loadables.Instance().emulators[platform.emulator]
         emulator.execute_rom(platform.commandline, self.filename)
         pass
 
