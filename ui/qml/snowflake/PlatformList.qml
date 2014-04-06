@@ -2,16 +2,18 @@ import QtQuick 2.0
 
 ListView {
     id: platformList
-    anchors.fill: parent
-    model: platformListModel
     focus: true
     orientation: "Horizontal"
+    onMovementEnded: {
+        controller.thingSelected(model.platform);
+
+    }
+
     delegate: Component {
         Rectangle {
             id: platformTab
             width: platformList.width / platformList.count
             height: 125
-
             CustomBorder
                     {
                         commonBorder: false
@@ -38,6 +40,7 @@ ListView {
                 horizontalAlignment: Text.AlignRight
                 color: platformTab.ListView.isCurrentItem ? "white": "black"
             }
+
 
             MouseArea {
                 anchors.fill: parent

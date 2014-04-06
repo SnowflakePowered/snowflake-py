@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf92cace-0292-46d5-84d1-31840663235b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/qml/snowflake/CustomBorder.qml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/loadables/platforms/NINTENDO_NES.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/qml/snowflake/PlatformList.qml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/loadables/platforms/SEGA_GEN.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/listmodel/__init__.py" afterPath="$PROJECT_DIR$/ui/listmodel/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/main.py" afterPath="$PROJECT_DIR$/ui/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platformids.py" afterPath="$PROJECT_DIR$/platformids.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/listmodel/qml_platforms.py" afterPath="$PROJECT_DIR$/ui/listmodel/qml_platforms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/snowflake.iml" afterPath="$PROJECT_DIR$/.idea/snowflake.iml" />
+    <list default="true" id="cf92cace-0292-46d5-84d1-31840663235b" name="Default" comment="Add more platforms to UI">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/qml/snowflake/ColorScheme.qml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/qml/snowflake/PlatformList.qml" afterPath="$PROJECT_DIR$/ui/qml/snowflake/PlatformList.qml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/qml/snowflake/snowflake.qml" afterPath="$PROJECT_DIR$/ui/qml/snowflake/snowflake.qml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/qml/snowflake/snowflake.qmlproject.user" afterPath="$PROJECT_DIR$/ui/qml/snowflake/snowflake.qmlproject.user" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="snowflake.iws" />
@@ -25,7 +19,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/snowflake$playground.coverage" NAME="playground Coverage Results" MODIFIED="1396500092473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/snowflake$main.coverage" NAME="main Coverage Results" MODIFIED="1396762465871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
+    <SUITE FILE_PATH="coverage/snowflake$main.coverage" NAME="main Coverage Results" MODIFIED="1396827291866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -47,7 +41,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ui/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="22" selection-start="142" selection-end="142" vertical-scroll-proportion="-0.017456358" vertical-offset="92" max-vertical-offset="493">
+            <state line="6" column="22" selection-start="165" selection-end="165" vertical-scroll-proportion="0.23943663" vertical-offset="0" max-vertical-offset="493">
               <folding />
             </state>
           </provider>
@@ -65,7 +59,7 @@
       <file leaf-file-name="NINTENDO_NES.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loadables/platforms/NINTENDO_NES.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="15" selection-start="0" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+            <state line="12" column="15" selection-start="0" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="340">
               <folding />
             </state>
           </provider>
@@ -74,7 +68,7 @@
       <file leaf-file-name="SEGA_GEN.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loadables/platforms/SEGA_GEN.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="15" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+            <state line="12" column="15" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="340">
               <folding>
                 <marker date="1396759094731" expanded="true" signature="191:212" placeholder="file_extensions:" />
               </folding>
@@ -85,7 +79,7 @@
       <file leaf-file-name="qml_platforms.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/listmodel/qml_platforms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+            <state line="1" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="816">
               <folding />
             </state>
           </provider>
@@ -95,17 +89,6 @@
         <entry file="file://$PROJECT_DIR$/identifiers.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="snowflake.qml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/qml/snowflake/snowflake.qml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="42" selection-start="1170" selection-end="1170" vertical-scroll-proportion="-12.36" vertical-offset="354" max-vertical-offset="918">
               <folding />
             </state>
           </provider>
@@ -114,7 +97,7 @@
       <file leaf-file-name="loadables.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loadables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="782">
+            <state line="7" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="867">
               <folding />
             </state>
           </provider>
@@ -124,9 +107,7 @@
         <entry file="file://$PROJECT_DIR$/platforms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="18" column="28" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="765">
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,7 +115,7 @@
       <file leaf-file-name="platformids.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/platformids.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="28" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+            <state line="1" column="28" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="119">
               <folding />
             </state>
           </provider>
@@ -361,17 +342,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef/bin/git.exe" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -514,9 +495,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -538,6 +516,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -657,14 +638,17 @@
       <created>1396752248761</created>
       <updated>1396752248761</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add more platforms to UI">
+      <created>1396762506591</created>
+      <updated>1396762506591</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -681,6 +665,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -702,7 +687,8 @@
     <MESSAGE value="Add a ListView that contains systems.&#10;&#10;ITS SOMETHING D: pyqt5 y u no docs" />
     <MESSAGE value="Add signal to platform switching" />
     <MESSAGE value="update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="update readme" />
+    <MESSAGE value="Add more platforms to UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add more platforms to UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -739,45 +725,33 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/playground.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="48" selection-start="1001" selection-end="1027" vertical-scroll-proportion="0.0" vertical-offset="177" max-vertical-offset="578">
-          <folding />
-        </state>
+        <state line="36" column="48" selection-start="1001" selection-end="1027" vertical-scroll-proportion="0.0" vertical-offset="177" max-vertical-offset="578" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/games.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="26" selection-start="919" selection-end="920" vertical-scroll-proportion="0.6379691" vertical-offset="187" max-vertical-offset="765">
-          <folding />
-        </state>
+        <state line="29" column="26" selection-start="919" selection-end="920" vertical-scroll-proportion="0.6379691" vertical-offset="187" max-vertical-offset="765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scrapermap.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="527">
-          <folding />
-        </state>
+        <state line="6" column="3" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="527" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="120" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-          <folding />
-        </state>
+        <state line="4" column="120" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loadables/platforms/NINTENDO_SNES.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="15" selection-start="0" selection-end="353" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <folding />
-        </state>
+        <state line="8" column="15" selection-start="0" selection-end="353" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/platforms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="28" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="765">
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -790,9 +764,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/qml/snowflake/snowflake.qml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="42" selection-start="1170" selection-end="1170" vertical-scroll-proportion="-12.36" vertical-offset="354" max-vertical-offset="918">
-          <folding />
-        </state>
+        <state line="39" column="42" selection-start="1170" selection-end="1170" vertical-scroll-proportion="-12.36" vertical-offset="354" max-vertical-offset="918" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loadables/platforms/NINTENDO_NES.yml">
@@ -821,17 +793,13 @@
     <entry file="file://$PROJECT_DIR$/identifiers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="362">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-1571908645/PyQt5/Qt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.8356807" vertical-offset="356" max-vertical-offset="782">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.8356807" vertical-offset="356" max-vertical-offset="782" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/listmodel/__init__.py">
@@ -850,7 +818,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="22" selection-start="142" selection-end="142" vertical-scroll-proportion="-0.017456358" vertical-offset="92" max-vertical-offset="493">
+        <state line="6" column="22" selection-start="165" selection-end="165" vertical-scroll-proportion="0.23943663" vertical-offset="0" max-vertical-offset="493">
           <folding />
         </state>
       </provider>
