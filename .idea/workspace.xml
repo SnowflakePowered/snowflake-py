@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cf92cace-0292-46d5-84d1-31840663235b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/main.py" afterPath="$PROJECT_DIR$/ui/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/listmodel/qml_platforms.py" afterPath="$PROJECT_DIR$/ui/listmodel/qml_platforms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/qml/snowflake/snowflake.qml" afterPath="$PROJECT_DIR$/ui/qml/snowflake/snowflake.qml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="snowflake.iws" />
@@ -63,7 +60,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="170" selection-start="419" selection-end="419" vertical-scroll-proportion="0.19318181" vertical-offset="0" max-vertical-offset="440">
+            <state line="4" column="121" selection-start="317" selection-end="317" vertical-scroll-proportion="0.15454546" vertical-offset="0" max-vertical-offset="440">
               <folding />
             </state>
           </provider>
@@ -591,7 +588,11 @@
       <created>1396749438729</created>
       <updated>1396749438729</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add signal to platform switching">
+      <created>1396752175600</created>
+      <updated>1396752175600</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -634,7 +635,8 @@
     <MESSAGE value="fix scraper&#10;" />
     <MESSAGE value="Split platform ids to own module, fix #1 in gamesdb scraper" />
     <MESSAGE value="Add a ListView that contains systems.&#10;&#10;ITS SOMETHING D: pyqt5 y u no docs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a ListView that contains systems.&#10;&#10;ITS SOMETHING D: pyqt5 y u no docs" />
+    <MESSAGE value="Add signal to platform switching" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add signal to platform switching" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -771,7 +773,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="170" selection-start="419" selection-end="419" vertical-scroll-proportion="0.19318181" vertical-offset="0" max-vertical-offset="440">
+        <state line="4" column="121" selection-start="317" selection-end="317" vertical-scroll-proportion="0.15454546" vertical-offset="0" max-vertical-offset="440">
           <folding />
         </state>
       </provider>
