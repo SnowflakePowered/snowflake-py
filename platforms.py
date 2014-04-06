@@ -2,7 +2,6 @@ import subprocess
 import os
 import constants
 import shlex
-from enum import Enum
 
 class PlatformInfo:
     def __init__(self, platform_id, full_name, short_name, company, release_date, emulator,
