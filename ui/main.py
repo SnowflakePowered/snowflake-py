@@ -5,22 +5,18 @@ from PyQt5.QtCore import *
 from PyQt5.QtQml import *
 from PyQt5.Qt import *
 from loadables import Loadables
-import listmodel.qml_platforms as qml_platforms
+from listmodel.qml_platforms import *
 def main():
-    item = Loadables.Instance().platforms["NINTENDO_SNES"]
-    item_wrp = qml_platforms.PlatformsWrapper(item)
-    platform_model = qml_platforms.PlatformsListModel([item_wrp, item_wrp])
+    icelake_plat = Loadables.Instance().platforms
+    platform_model = PlatformsListModel([PlatformsWrapper(platform_info) for platform_info in iter(icelake_plat.values())])
     app = QGuiApplication(sys.argv)
     engine = QQmlApplicationEngine()
-    controller = qml_platforms.Controller()
-    engine.rootContext().setContextProperty('pythonListModel', platform_model)
+    controller = Controller()
+    engine.rootContext().setContextProperty('platformListModel', platform_model)
     engine.rootContext().setContextProperty('controller', controller)
     engine.load(QUrl("qml/snowflake/snowflake.qml"))
-
     window = engine.rootObjects()[0]
-    chl = window.findChildren(QObject)
     window.show()
-    list = window.findChild(QQuickItem, "pythonList")
     sys.exit(app.exec_())
 
 if __name__ == '__main__':

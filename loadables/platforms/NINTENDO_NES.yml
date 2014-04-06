@@ -1,0 +1,14 @@
+!!python/object:platforms.PlatformInfo
+platform_id: NINTENDO_NES
+commandline: '-L cores/snes9x_next_libretro.dll [ICELAKE_ROMNAME]' #todo change to nes core
+company: Nintendo
+emulator: retroarch
+file_extensions: [nes]
+full_name: Nintendo Entertainment System
+metadata: []
+release_day: 21 #todo fix - Inaccurate
+release_month: 11 #todo fix - Inaccurate
+release_year: 1990 #todo fix - Inaccurate
+scrapers: [thegamesdb]
+short_name: NES
+
