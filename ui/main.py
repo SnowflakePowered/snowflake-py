@@ -12,7 +12,9 @@ def main():
     platform_model = qml_platforms.PlatformsListModel([item_wrp, item_wrp])
     app = QGuiApplication(sys.argv)
     engine = QQmlApplicationEngine()
+    controller = qml_platforms.Controller()
     engine.rootContext().setContextProperty('pythonListModel', platform_model)
+    engine.rootContext().setContextProperty('controller', controller)
     engine.load(QUrl("qml/snowflake/snowflake.qml"))
 
     window = engine.rootObjects()[0]

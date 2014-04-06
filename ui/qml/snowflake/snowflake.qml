@@ -27,6 +27,8 @@ ListView {
             }
             MouseArea {
                 anchors.fill: parent
+                onClicked: { controller.thingSelected(model.somerole) }
+
             }
         }
     }

@@ -16,6 +16,10 @@ class PlatformsWrapper(QObject):
     changed = pyqtSignal()
     full_name = pyqtProperty("QString", _full_name, notify=changed)
 
+class Controller(QObject):
+    @pyqtSlot(QObject)
+    def thingSelected(self, wrapper):
+        print(wrapper.platform.platform_id)
 
 class PlatformsListModel(QAbstractListModel):
      def __init__(self, platforms):
