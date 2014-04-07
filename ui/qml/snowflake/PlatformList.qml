@@ -2,20 +2,15 @@ import QtQuick 2.0
 
 ListView {
     signal platformChanged(var platform)
+
     id: platformList
     focus: true
     orientation: "Horizontal"
-    interactive: false
-    Keys.onPressed: {
-                if (event.key == Qt.Key_Left){
-                    platformList.decrementCurrentIndex();
-                    platformChanged(platformList.currentItem.selectedPlatform.platform);
-                }
-                else if (event.key == Qt.Key_Right){
-                    platformList.incrementCurrentIndex();
-                    platformChanged(platformList.currentItem.selectedPlatform.platform);
-                }
-            }
+    interactive: true
+
+    onCurrentIndexChanged:{
+        platformChanged(platformList.currentItem.selectedPlatform.platform);
+    }
 
     delegate: Component {
         Rectangle {
@@ -54,7 +49,6 @@ ListView {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    platformList.platformChanged(model.platform)
                     platformList.currentIndex = index;
                 }
             }
