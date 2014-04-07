@@ -16,16 +16,10 @@ class PlatformsWrapper(QObject):
 
     changed = pyqtSignal()
 
-class Controller(QObject):
-    @pyqtSlot(QObject)
-    def thingSelected(self, wrapper):
-        print(wrapper.platform.platform_id)
-
 class PlatformsListModel(QAbstractListModel):
      def __init__(self, platforms):
         QAbstractListModel.__init__(self)
         self.platform = Qt.UserRole + 1
-
         self.platforms = platforms
 
      def roleNames(self):

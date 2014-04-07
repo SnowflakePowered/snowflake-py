@@ -1,19 +1,28 @@
 import QtQuick 2.0
 
 ListView {
+    signal platformChanged(var platform)
     id: platformList
     focus: true
     orientation: "Horizontal"
-    onMovementEnded: {
-        controller.thingSelected(model.platform);
-
-    }
+    interactive: false
+    Keys.onPressed: {
+                if (event.key == Qt.Key_Left){
+                    platformList.decrementCurrentIndex();
+                    platformChanged(platformList.currentItem.selectedPlatform.platform);
+                }
+                else if (event.key == Qt.Key_Right){
+                    platformList.incrementCurrentIndex();
+                    platformChanged(platformList.currentItem.selectedPlatform.platform);
+                }
+            }
 
     delegate: Component {
         Rectangle {
             id: platformTab
             width: platformList.width / platformList.count
             height: 125
+            property variant selectedPlatform: model
             CustomBorder
                     {
                         commonBorder: false
@@ -45,7 +54,7 @@ ListView {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    controller.thingSelected(model.platform);
+                    platformList.platformChanged(model.platform)
                     platformList.currentIndex = index;
                 }
             }

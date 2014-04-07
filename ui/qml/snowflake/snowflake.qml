@@ -3,28 +3,34 @@ import QtQuick.Controls 1.1
 import QtQuick.Layouts 1.1
 
 ApplicationWindow{
-width: 1280
-height: 720
-id: mainWindow
+    title: "Snowflake"
+    width: 1280
+    height: 720
+    id: mainWindow
+    minimumHeight: 504
+    minimumWidth: 896
 
-ColorScheme{ id: colorScheme }
-
-title: "Snowflake"
-        Rectangle{
+    Rectangle{
             id: platformSelectorWrapper
+            objectName: "platformSelectorWrapper"
+
             height: 130
-            color: colorScheme.primaryColor
+            color: "blue"
             anchors.right: parent.right
             anchors.rightMargin: 0
             anchors.left: parent.left
             anchors.leftMargin: 0
             PlatformList{
+                id: platformSelector
+                objectName: "platformSelector"
                 model: platformListModel
                 anchors.fill: parent
+                onPlatformChanged:{
+                    textObj.text = qsTr(platform.platform_id)
+                }
             }
         }
-
-        Rectangle{
+    Rectangle{
             id: dummy
             color: "lightsteelblue"
             anchors{
@@ -38,6 +44,11 @@ title: "Snowflake"
                 leftMargin: 0
                 bottomMargin: 0
             }
+            Text{
+                id: textObj
+                text: "Testing"
+            }
         }
+
     }
 
