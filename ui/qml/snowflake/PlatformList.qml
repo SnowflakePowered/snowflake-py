@@ -15,27 +15,20 @@ ListView {
 	delegate: Component {
 		Rectangle {
 			id: platformTab
-			width: platformList.width / platformList.count
-			height: 125
+            width: (ListView.count > 5) ? platformList.width / 5 :  platformList.width / platformList.count
+            height: parent.height - 5
 			property variant selectedPlatform: model
-			CustomBorder
-					{
-						commonBorder: false
-						lBorderwidth: 0
-						rBorderwidth: 0
-						tBorderwidth: 0
-						bBorderwidth: 5
-						borderColor: "#5A9FD6"
-					}
+
 
 			color: ListView.isCurrentItem ? "#5A9FD6" : "white"
 			Text {
+
 				id: platformTitle
-				elide: Text.ElideRight
+                elide: Text.ElideRight
 				text: model.platform.full_name
 				font.family: "Roboto"
 				font.weight: Font.Light
-				font.pointSize: 16
+                font.pointSize: 12
 				anchors.leftMargin: 10
 				anchors.rightMargin: 10
 				anchors.bottomMargin: 5

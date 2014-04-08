@@ -14,8 +14,6 @@ class PlatformsWrapper(QObject):
     def short_name(self):
         return str(self.platform.short_name)
 
-    changed = pyqtSignal()
-
 class PlatformsListModel(QAbstractListModel):
      def __init__(self, platforms):
         QAbstractListModel.__init__(self)
