@@ -17,9 +17,9 @@ class RunnableGameWrapper(QObject):
     @pyqtProperty("QString")
     def infobox(self):
         return """
-                <b>Publisher</b>| <i>{0}</i> <br />
-                <b>Release Date</b>| <i>{1}</i> <br />
-                <b>Genre</b>| <i>{2}</i>
+                <b>Publisher</b> | <i>{0}</i> <br />
+                <b>Release Date</b> | <i>{1}</i> <br />
+                <b>Genre</b> | <i>{2}</i>
                 """.format(
             self.game.gameinfo.publisher,
             self.game.gameinfo.serialize_releasedate(),

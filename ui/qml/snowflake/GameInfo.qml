@@ -26,7 +26,6 @@ Rectangle{
    }
    BackgroundedTextEdit{
        id: gameDescription
-       anchors.top: gameTitle.bottom
        anchors.left: parent.left
        anchors.right: parent.right
        anchors.leftMargin: 15
@@ -35,6 +34,7 @@ Rectangle{
        anchors.bottom: parent.bottom
        anchors.bottomMargin: 30
        backgroundColor: "#80000000"
+       height: 300
        text{
            text: textGameDescription
            color: "#fff"
@@ -58,7 +58,7 @@ Rectangle{
            color: "#fff"
            font{
                weight: Font.Light
-               pointSize: 21
+               pointSize: 18
                family: "Roboto"
            }
        }

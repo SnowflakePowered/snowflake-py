@@ -14,6 +14,11 @@ import constants
 def test(platform):
     print (platform.platform_id)
 
+
+@pyqtSlot(QVariant)
+def test2(platform):
+    print (platform.title)
+
 def main():
     db = database.GamesDatabase(constants.core_path)
     games = db.get_games_for_platform("NINTENDO_SNES")
@@ -27,7 +32,8 @@ def main():
     engine.load(QUrl("qml/snowflake/snowflake.qml"))
     window = engine.rootObjects()[0]
     sel = window.findChild(QQuickItem, name="platformSelector")
-    gamesel = window.findChild(QQuickItem, name="platformSelector")
+    gamesel = window.findChild(QQuickItem, name="gamesList")
+    gamesel.gameChanged.connect(test2)
     sel.platformChanged.connect(test)
     window.show()
     sys.exit(app.exec_())

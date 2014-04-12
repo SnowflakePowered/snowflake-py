@@ -52,6 +52,7 @@ ApplicationWindow{
                color: "lightgrey"
                ListView {
                    id: gamesList
+                   objectName: "gamesList"
                    width: parent.width
                    height: 300
                    focus: true
