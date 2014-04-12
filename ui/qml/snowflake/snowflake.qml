@@ -18,12 +18,6 @@ ApplicationWindow{
                 objectName: "platformSelector"
                 model: platformListModel
                 anchors.fill: parent
-                onPlatformChanged:{
-                    gameInfo.textGameTitle = qsTr(platform.platform_id)
-                }
-                ScrollBar {
-                        flickable: platformSelector;
-               }
             }
 
         }
@@ -56,8 +50,50 @@ ApplicationWindow{
                 }
                width: 350
                color: "lightgrey"
-               ListView{
-                model: platformList
+               ListView {
+                   id: gamesList
+                   width: parent.width
+                   height: 300
+                   focus: true
+                   interactive: true
+
+                   model: gamesListModel
+                   signal gameChanged(var game)
+                   onCurrentIndexChanged:{
+                       gameChanged(gamesList.currentItem.selectedGame.game);
+                   }
+                   onGameChanged:{
+                       gameInfo.textGameTitle = qsTr(game.title)
+                       gameInfo.textGameDescription = qsTr(game.description)
+                       gameInfo.textGameShortInfo= qsTr(game.infobox)
+
+                   }
+
+                   delegate: Component {
+                       Rectangle {
+                           width: gamesList.width
+                           height: 40
+                           color: ListView.isCurrentItem ? "#5A9FD6" : "lightgrey"
+                           property variant selectedGame: model
+                           Text {
+                               id: title
+                               elide: Text.ElideRight
+                               text: model.game.title
+                               color: "white"
+                               font.bold: true
+                               anchors.leftMargin: 10
+                               anchors.fill: parent
+                               verticalAlignment: Text.AlignVCenter
+                           }
+                           MouseArea {
+                               anchors.fill: parent
+                               onClicked: {
+                                   gamesList.focus = true;
+                                   gamesList.currentIndex = index;
+                               }
+                           }
+                       }
+                   }
                }
             }
              GameInfo{

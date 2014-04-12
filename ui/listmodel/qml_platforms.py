@@ -27,6 +27,7 @@ class PlatformsListModel(QAbstractListModel):
 
      def rowCount(self, parent=QModelIndex()):
          return len(self.platforms)
+
      def data(self, index, role):
          if index.isValid() and role == self.platform:
              return self.platforms[index.row()]

@@ -1,12 +1,9 @@
 import QtQuick 2.0
 
 Rectangle{
-    property string textValue
-    property int fontPointSize
-    property string family
+
     property string backgroundColor
-    property string textColor
-    property var fontWeight
+    property alias text : textContent
 
     id: textBackground
     color: backgroundColor
@@ -16,10 +13,5 @@ Rectangle{
         id: textContent
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: parent.verticalCenter
-        text: textValue
-        font.pointSize: fontPointSize
-        font.family: family
-        font.weight: fontWeight
-        color: textColor
     }
 }

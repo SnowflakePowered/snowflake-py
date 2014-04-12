@@ -4,9 +4,9 @@ ListView {
 	signal platformChanged(var platform)
 
 	id: platformList
-	focus: true
+    focus: false
 	orientation: "Horizontal"
-	interactive: true
+    interactive: true
 
 	onCurrentIndexChanged:{
 		platformChanged(platformList.currentItem.selectedPlatform.platform);
@@ -42,6 +42,7 @@ ListView {
 			MouseArea {
 				anchors.fill: parent
 				onClicked: {
+                    platformList.focus = true;
 					platformList.currentIndex = index;
 				}
 			}

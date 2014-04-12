@@ -4,7 +4,7 @@ Rectangle{
    color: "lightsteelblue"
 
    property string textGameTitle
-   property string textGameDescrption
+   property string textGameDescription
    property string textGameShortInfo
 
    BackgroundedText{
@@ -14,24 +14,37 @@ Rectangle{
        anchors.leftMargin: 15
        anchors.topMargin: 15
        backgroundColor: "#80000000"
-       textValue: textGameTitle
-       textColor: "#ffffff"
-       family: "Roboto"
-       fontWeight: Font.Light
-       fontPointSize: 21
+       text{
+           text: textGameTitle
+           color: "#fff"
+           font{
+               weight: Font.Light
+               pointSize: 21
+               family: "Roboto"
+           }
+       }
    }
-   BackgroundedText{
+   BackgroundedTextEdit{
        id: gameDescription
        anchors.top: gameTitle.bottom
        anchors.left: parent.left
+       anchors.right: parent.right
        anchors.leftMargin: 15
-       anchors.topMargin: 15
+       anchors.topMargin: 30
+       anchors.rightMargin: 15
+       anchors.bottom: parent.bottom
+       anchors.bottomMargin: 30
        backgroundColor: "#80000000"
-       textValue: "gameDescription"
-       textColor: "#ffffff"
-       family: "Roboto"
-       fontWeight: Font.Light
-       fontPointSize: 18
+       text{
+           text: textGameDescription
+           color: "#fff"
+           font{
+               weight: Font.Light
+               pointSize: 14
+               family: "Roboto"
+           }
+       }
+
    }
    BackgroundedText{
        id: gameShortInfo
@@ -40,11 +53,15 @@ Rectangle{
        anchors.rightMargin: 15
        anchors.topMargin: 15
        backgroundColor: "#80000000"
-       textValue: "<b>Publisher</b>|gamePublisher<br/><b>ReleaseDate</b>|gameReleaseDate<br/><b>Genre</b>|gameGenre"
-       textColor: "#ffffff"
-       family: "Roboto"
-       fontWeight: Font.Light
-       fontPointSize: 18
+       text{
+           text: textGameShortInfo
+           color: "#fff"
+           font{
+               weight: Font.Light
+               pointSize: 21
+               family: "Roboto"
+           }
+       }
    }
 
 }
