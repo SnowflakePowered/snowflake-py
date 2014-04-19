@@ -20,11 +20,11 @@ def test2(platform):
     print (platform.title)
 
 def main():
-    db = database.GamesDatabase(constants.core_path)
+    db = database.GamesDatabase(constants.database_path)
     games = db.get_games_for_platform("NINTENDO_SNES")
     icelake_plat = Loadables.Instance().platforms
-    games_model = qml_games.RunnableGamesListModel([qml_games.RunnableGameWrapper(game_info) for game_info in games])
-    platform_model = qml_platforms.PlatformsListModel([qml_platforms.PlatformsWrapper(platform_info) for platform_info in iter(icelake_plat.values())])
+    games_model = qml_games.RunnableGamesListModel(sorted((qml_games.RunnableGameWrapper(game) for game in games), key=lambda game: game.game.gameinfo.title))
+    platform_model = qml_platforms.PlatformsListModel(sorted((qml_platforms.PlatformsWrapper(platform_info) for platform_info in iter(icelake_plat.values())), key = lambda platform: platform.platform_id))
     app = QGuiApplication(sys.argv)
     engine = QQmlApplicationEngine()
     engine.rootContext().setContextProperty('platformListModel', platform_model)

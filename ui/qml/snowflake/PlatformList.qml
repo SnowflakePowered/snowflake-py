@@ -41,7 +41,6 @@ ListView {
 			MouseArea {
 				anchors.fill: parent
 				onClicked: {
-                    platformList.focus = true;
 					platformList.currentIndex = index;
 				}
 			}

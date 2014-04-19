@@ -6,6 +6,8 @@ Rectangle{
    property string textGameTitle
    property string textGameDescription
    property string textGameShortInfo
+   property string boxartUrl
+
 
    BackgroundedText{
        id: gameTitle
@@ -62,6 +64,19 @@ Rectangle{
                family: "Roboto"
            }
        }
+   }
+   Image{
+       id: gameBoxArt
+       anchors.top: gameTitle.bottom
+       anchors.left: parent.left
+       anchors.bottom: gameDescription.top
+       anchors.leftMargin: 15
+       anchors.topMargin: 15
+       anchors.bottomMargin: 15
+       fillMode: Image.PreserveAspectFit
+
+       source: boxartUrl
+
    }
 
 }

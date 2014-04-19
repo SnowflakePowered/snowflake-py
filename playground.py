@@ -2,7 +2,7 @@
 
 import yaml
 import json
-import database
+import gameinfo
 import os
 import glob
 import sys
@@ -24,13 +24,13 @@ def serialize():
     return data
 
 def dab():
-    db = database.GamesDatabase(os.path.dirname(__file__))
+    db = gameinfo.GamesDatabase(os.path.dirname(__file__))
     db.create_database()
     db.add_game(serialize(), "ali.smc")
 
 def main():
     loadables = Loadables.Instance()
-    db = database.GamesDatabase(os.path.dirname(__file__))
+    db = gameinfo.GamesDatabase(os.path.dirname(__file__))
     dab()
     game = db.get_game('mTbUQtQz8eYowBqV6o62uj')
     #game.run()
