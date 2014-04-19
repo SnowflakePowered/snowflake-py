@@ -5,10 +5,26 @@ import QtQuick.Layouts 1.1
 ApplicationWindow{
 
     Rectangle{
+        states: [
+
+            State {
+                    name: "open"; when: mouseArea.pressed
+                    PropertyChanges { target: platformSelectorWrapper; height: 130 }
+              }
+        ]
+        transitions: Transition {
+            to: "open"
+            reversible: true
+            NumberAnimation { properties: "height"; easing.type: Easing.InOutQuad }
+        }
+
+
+
             id: platformSelectorWrapper
             objectName: "platformSelectorWrapper"
             color: "#5A9FD6"
-            height: 130
+            height: 0
+            z: 1000
             anchors.right: parent.right
             anchors.rightMargin: 0
             anchors.left: parent.left
@@ -23,19 +39,21 @@ ApplicationWindow{
         }
 
     Rectangle{
+        Keys.onPressed: {
+            if (event.key === Qt.Key_C) {
+                if (platformSelectorWrapper.state === 'open'){
+                    platformSelectorWrapper.state = ''
+                }else{
+                    platformSelectorWrapper.state = 'open'
+
+                }
+            }
+        }
+
+
             id: gameAreaWrapper
             color: "lightsteelblue"
-            anchors{
-                top: platformSelectorWrapper.bottom
-                right: parent.right
-                left: parent.left
-                bottom: parent.bottom
-
-                topMargin: 0
-                rightMargin: 0
-                leftMargin: 0
-                bottomMargin: 0
-            }
+            anchors.fill: parent
 
             Rectangle{
                 id: gameListWrapper
@@ -67,6 +85,7 @@ ApplicationWindow{
                        gameInfo.textGameTitle = qsTr(game.title)
                        gameInfo.textGameDescription = qsTr(game.description)
                        gameInfo.textGameShortInfo= qsTr(game.infobox)
+                       gameInfo.boxartUrl = qsTr(game.boxart_url)
 
                    }
 
@@ -85,6 +104,7 @@ ApplicationWindow{
                                anchors.leftMargin: 10
                                anchors.fill: parent
                                verticalAlignment: Text.AlignVCenter
+                               font.family: "Roboto"
                            }
                            MouseArea {
                                anchors.fill: parent
@@ -122,6 +142,8 @@ ApplicationWindow{
     onVisibilityChanged: {
         platformSelector.platformChanged(platformSelector.currentItem.selectedPlatform.platform);
     }
+
+
 }
 
 

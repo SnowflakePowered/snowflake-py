@@ -7,7 +7,6 @@ ListView {
     focus: false
 	orientation: "Horizontal"
     interactive: true
-
 	onCurrentIndexChanged:{
 		platformChanged(platformList.currentItem.selectedPlatform.platform);
 	}
