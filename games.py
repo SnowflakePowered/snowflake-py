@@ -16,7 +16,7 @@ class RunnableGame():
 
 class GameInfo:
     def __init__(self, title, publisher, description, genre,
-                 release_date, platform="NINTENDO_SNES", images={}, metadata=[]):
+                 release_date, platform="NINTENDO_SNES", images=None, metadata=[]):
         self.title = title
         self.publisher = publisher
         self.platform = platform

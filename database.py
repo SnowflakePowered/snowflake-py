@@ -24,6 +24,8 @@ class GamesDatabase():
                                           );'''
         )
         self.database.commit()
+
+
     def get_games_for_platform(self, platform):
         query = '''SELECT * FROM `games` WHERE `platform` == "{0}"'''.format(platform)
         cur = self.database.cursor()

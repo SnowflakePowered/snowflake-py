@@ -123,9 +123,9 @@ def get_game_datas(game_id):
                           gamedata["release"].split("/")[1]],
             genre=gamedata["genre"],
 
-            images={
-                constants.key_boxarts: boxarts
-            }
+                images={
+                    constants.key_boxarts: boxarts
+                }
         )
     except UnboundLocalError:
 

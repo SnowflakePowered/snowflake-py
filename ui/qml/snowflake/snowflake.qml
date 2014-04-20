@@ -34,6 +34,11 @@ ApplicationWindow{
                 objectName: "platformSelector"
                 model: platformListModel
                 anchors.fill: parent
+                onPlatformChanged:
+                {
+                    gamesList.model =  gamesListModel[platform.platform_id]
+                    console.log(platform.platform_id)
+                }
             }
 
         }
@@ -76,7 +81,7 @@ ApplicationWindow{
                    focus: true
                    interactive: true
 
-                   model: gamesListModel
+                   model: gamesListModel[platformSelector.currentItem.selectedPlatform.platform_id]
                    signal gameChanged(var game)
                    onCurrentIndexChanged:{
                        gameChanged(gamesList.currentItem.selectedGame.game);
