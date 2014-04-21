@@ -1,6 +1,8 @@
 import sys
 from PyQt5.QtQuick import *
 from PyQt5.QtCore import *
+from PyQt5.QtGui import QGuiApplication
+
 import database
 import constants
 from ui.snowflakeui import SnowflakeUI
@@ -20,20 +22,28 @@ class DefaultUI(SnowflakeUI):
         super().__init__("qml/snowflake/snowflake.qml", database.GamesDatabase(constants.database_path))
         self.engine.rootContext().setContextProperty('platformListModel', self.platformsListModel)
         self.engine.rootContext().setContextProperty('gamesListModel', self.gamesListModel)
+        self.init_ui()
+
+        self.window = self.get_root()
+        self.platformSelector = self.window.findChild(QQuickItem, name="platformSelector")
+        self.gamesList = self.window.findChild(QQuickItem, name="gamesList")
+
+
+    def get_root(self):
+        return self.engine.rootObjects()[0]
+
+    def show(self):
+        self.window.show()
+
+
 
 def start():
-    userinterface = DefaultUI()
-    engine = userinterface.engine
-
-    userinterface.load_ui()
-    window = engine.rootObjects()[0]
-
-    sel = window.findChild(QQuickItem, name="platformSelector")
-    gamesel = window.findChild(QQuickItem, name="gamesList")
-    gamesel.gameChanged.connect(test2)
-    sel.platformChanged.connect(test)
-    window.show()
-    sys.exit(userinterface.app.exec_())
+    app = QGuiApplication(sys.argv)
+    ui = DefaultUI()
+    ui.gamesList.gameChanged.connect(test2)
+    ui.platformSelector.platformChanged.connect(test)
+    ui.show()
+    sys.exit(app.exec_())
 
 if __name__ == '__main__':
     start()

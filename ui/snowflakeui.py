@@ -1,6 +1,5 @@
 import sys
 from PyQt5.QtCore import QUrl
-from PyQt5.QtGui import QGuiApplication
 from PyQt5.QtQml import QQmlApplicationEngine
 from ui.listmodel import qml_games, qml_platforms
 from loadables import Loadables
@@ -9,8 +8,7 @@ __author__ = 'Ronny'
 
 
 class SnowflakeUI:
-    def __init__(self, qmlfile, gamesdb, args=sys.argv):
-        self.app = QGuiApplication(args)
+    def __init__(self, qmlfile, gamesdb):
         self.engine = QQmlApplicationEngine()
         self.games_db = gamesdb
         self.root_qml = qmlfile
@@ -19,6 +17,12 @@ class SnowflakeUI:
 
     def init_ui(self):
         self.engine.load(QUrl(self.root_qml))
+
+    def show(self):
+        raise NotImplementedError
+
+    def get_root(self):
+        raise NotImplementedError
 
     def _load_games(self):
         gameslist = {}

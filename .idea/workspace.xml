@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf92cace-0292-46d5-84d1-31840663235b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ui/snowflakeui.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/main.py" afterPath="$PROJECT_DIR$/ui/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/snowflakeui.py" afterPath="$PROJECT_DIR$/ui/snowflakeui.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="snowflake.iws" />
@@ -17,7 +17,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/snowflake$playground.coverage" NAME="playground Coverage Results" MODIFIED="1397864968832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/snowflake$main.coverage" NAME="main Coverage Results" MODIFIED="1398059044011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
+    <SUITE FILE_PATH="coverage/snowflake$main.coverage" NAME="main Coverage Results" MODIFIED="1398063021865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -36,19 +36,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="-0.31690142" vertical-offset="186" max-vertical-offset="765">
-              <folding />
+            <state line="41" column="20" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="935">
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="snowflakeui.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="snowflakeui.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ui/snowflakeui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="14" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="680">
+            <state line="12" column="27" selection-start="327" selection-end="327" vertical-scroll-proportion="0.47887325" vertical-offset="0" max-vertical-offset="748">
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -163,8 +165,8 @@
         <option value="$PROJECT_DIR$/database.py" />
         <option value="$PROJECT_DIR$/ui/listmodel/qml_platforms.py" />
         <option value="db-console:/fda7fe96/aefa666e-d463-4565-b8df-3c2a1da5a2ee/" />
-        <option value="$PROJECT_DIR$/ui/main.py" />
         <option value="$PROJECT_DIR$/ui/snowflakeui.py" />
+        <option value="$PROJECT_DIR$/ui/main.py" />
       </list>
     </option>
   </component>
@@ -712,13 +714,18 @@
       <created>1398041212223</created>
       <updated>1398041212223</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Move main UI into a subclass of the SnowflakeUI class">
+      <created>1398059087808</created>
+      <updated>1398059087808</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -735,7 +742,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -768,7 +774,8 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="gamesListModel now accessible by platform_id index." />
     <MESSAGE value="begin to refactor ui into a subclassable superclass" />
-    <option name="LAST_COMMIT_MESSAGE" value="begin to refactor ui into a subclassable superclass" />
+    <MESSAGE value="Move main UI into a subclass of the SnowflakeUI class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move main UI into a subclass of the SnowflakeUI class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -889,19 +896,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/snowflakeui.py">
+    <entry file="file://$PROJECT_DIR$/ui/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="14" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="680">
+        <state line="41" column="20" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="935">
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/main.py">
+    <entry file="file://$PROJECT_DIR$/ui/snowflakeui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="-0.31690142" vertical-offset="186" max-vertical-offset="765">
-          <folding />
+        <state line="12" column="27" selection-start="327" selection-end="327" vertical-scroll-proportion="0.47887325" vertical-offset="0" max-vertical-offset="748">
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
