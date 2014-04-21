@@ -18,35 +18,28 @@ class SnowflakeUI:
         self.games_db = gamesdb
         self.root_qml = qmlfile
 
-    def load_qml(self):
-        engine.load(QUrl(self.root_qml))
 
-    def init_ui(self):
-        self.load_qml()
-        self.engine.rootObjects()[0].show()
+    def load_ui(self):
+        self.engine.load(QUrl(self.root_qml))
 
-    def setContextProperty(self, pstr, args):
-        self.engine.rootContext().setContextProperty(pstr, args)
-
-    @staticmethod
     def _load_games(self):
         gameslist = {}
         keys = Loadables.Instance().platforms.keys()
         for platform in keys:
-            games = database.GamesDatabase(constants.database_path).get_games_for_platform(platform)
+            games = self.games_db.get_games_for_platform(platform)
             gameslist[platform] = qml_games.RunnableGamesListModel(sorted((qml_games.RunnableGameWrapper(game) for game in games),
                                                             key=lambda game: game.game.gameinfo.title))
         return gameslist
-    @classmethod
-    def _load_platforms(cls):
-            return qml_platforms.PlatformsListModel(sorted((qml_platforms.PlatformsWrapper(platform_info)
+
+    def _load_platforms(self):
+        return qml_platforms.PlatformsListModel(sorted((qml_platforms.PlatformsWrapper(platform_info)
                                                            for platform_info in iter(Loadables.Instance().platforms.values())),
                                                            key = lambda platform: platform.platform_id))
 
 
 @pyqtSlot(QVariant)
 def test(platform):
-    print (platform.platform_id)
+    print (platform)
 
 
 @pyqtSlot(QVariant)
@@ -54,26 +47,24 @@ def test2(platform):
     print (platform.title)
 
 
-def main():
-    games_model = SnowflakeUI._load_games('')
-    db = database.GamesDatabase(constants.database_path)
-    games = db.get_games_for_platform("NINTENDO_SNES")
+def start():
+    userinterface = SnowflakeUI("qml/snowflake/snowflake.qml",database.GamesDatabase(constants.database_path))
+    engine = userinterface.engine
+    engine = userinterface.engine
+    platforms = userinterface._load_platforms()
+    games = userinterface._load_games()
 
-    sels = Loadables.Instance().platforms.keys()
-    platform_model = qml_platforms.PlatformsListModel(sorted((qml_platforms.PlatformsWrapper(platform_info) for platform_info in iter(Loadables.Instance().platforms.values())), key = lambda platform: platform.platform_id))
-    app = QGuiApplication(sys.argv)
-    engine = QQmlApplicationEngine()
-    engine.rootContext().setContextProperty('platformListModel', platform_model)
-    engine.rootContext().setContextProperty('gamesListModel', games_model)
-    engine.load(QUrl("qml/snowflake/snowflake.qml"))
+    engine.rootContext().setContextProperty('platformListModel', platforms)
+    engine.rootContext().setContextProperty('gamesListModel', games)
+    userinterface.load_ui()
     window = engine.rootObjects()[0]
+
     sel = window.findChild(QQuickItem, name="platformSelector")
     gamesel = window.findChild(QQuickItem, name="gamesList")
     gamesel.gameChanged.connect(test2)
     sel.platformChanged.connect(test)
     window.show()
-    sys.exit(app.exec_())
-
+    sys.exit(userinterface.app.exec_())
 
 if __name__ == '__main__':
-    main()
+    start()

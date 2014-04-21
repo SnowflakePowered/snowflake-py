@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf92cace-0292-46d5-84d1-31840663235b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database.py" afterPath="$PROJECT_DIR$/database.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/games.py" afterPath="$PROJECT_DIR$/games.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/qml/snowflake/BackgroundedTextEdit.qml" afterPath="$PROJECT_DIR$/ui/qml/snowflake/BackgroundedTextEdit.qml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/qml/snowflake/PlatformList.qml" afterPath="$PROJECT_DIR$/ui/qml/snowflake/PlatformList.qml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/main.py" afterPath="$PROJECT_DIR$/ui/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/listmodel/qml_platforms.py" afterPath="$PROJECT_DIR$/ui/listmodel/qml_platforms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py" afterPath="$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/qml/snowflake/snowflake.qml" afterPath="$PROJECT_DIR$/ui/qml/snowflake/snowflake.qml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/qml/snowflake/snowflake.qmlproject.user" afterPath="$PROJECT_DIR$/ui/qml/snowflake/snowflake.qmlproject.user" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="snowflake.iws" />
@@ -23,7 +18,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/snowflake$playground.coverage" NAME="playground Coverage Results" MODIFIED="1397864968832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/snowflake$main.coverage" NAME="main Coverage Results" MODIFIED="1398038241220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
+    <SUITE FILE_PATH="coverage/snowflake$main.coverage" NAME="main Coverage Results" MODIFIED="1398041162514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -42,10 +37,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ui/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="41" selection-start="2071" selection-end="2071" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+            <state line="66" column="39" selection-start="2279" selection-end="2279" vertical-scroll-proportion="2.4856396" vertical-offset="0" max-vertical-offset="1122">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_pydev_execfile.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" vertical-offset="331" max-vertical-offset="714">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pydevd.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1497" column="0" selection-start="59648" selection-end="59648" vertical-scroll-proportion="0.0" vertical-offset="24063" max-vertical-offset="24446">
               <folding />
             </state>
           </provider>
@@ -60,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="qml_platforms.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="qml_platforms.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/listmodel/qml_platforms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="40" selection-start="624" selection-end="624" vertical-scroll-proportion="0.75821596" vertical-offset="0" max-vertical-offset="697">
+            <state line="27" column="33" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
               <folding />
             </state>
           </provider>
@@ -93,24 +106,6 @@
         <entry file="dbDummy://db-console:/fda7fe96/aefa666e-d463-4565-b8df-3c2a1da5a2ee/">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="16" selection-start="0" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="games.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/games.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="68" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="782">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scrapermap.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scrapermap.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
               <folding />
             </state>
           </provider>
@@ -167,8 +162,8 @@
         <option value="$PROJECT_DIR$/images.py" />
         <option value="$PROJECT_DIR$/database.py" />
         <option value="db-console:/fda7fe96/aefa666e-d463-4565-b8df-3c2a1da5a2ee/" />
-        <option value="$PROJECT_DIR$/ui/main.py" />
         <option value="$PROJECT_DIR$/ui/listmodel/qml_platforms.py" />
+        <option value="$PROJECT_DIR$/ui/main.py" />
       </list>
     </option>
   </component>
@@ -708,30 +703,34 @@
       <created>1397875315775</created>
       <updated>1397875315775</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="gamesListModel now accessible by platform_id index.">
+      <created>1398038336676</created>
+      <updated>1398038336676</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3900135" sideWeight="0.2575" order="11" side_tool="true" content_ui="tabs" x="806" y="463" width="528" height="455" />
+      <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4480432" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" x="806" y="463" width="528" height="455" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6099865" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22125" sideWeight="0.6099865" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4480432" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22125" sideWeight="0.55195683" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4480432" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.221875" sideWeight="0.55195683" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3900135" sideWeight="0.7425" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3900135" sideWeight="0.7425" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -762,7 +761,8 @@
     <MESSAGE value="Forgot to add BackgroundedTextEdit.qml&#10;" />
     <MESSAGE value="Sliding platform list and basic image loading" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="gamesListModel now accessible by platform_id index." />
+    <option name="LAST_COMMIT_MESSAGE" value="gamesListModel now accessible by platform_id index." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -783,15 +783,10 @@
           <option name="timeStamp" value="92" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="100" />
+      <option name="time" value="107" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scraper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="34" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.0" vertical-offset="569" max-vertical-offset="1207" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="413" />
@@ -799,7 +794,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loadables.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="12" selection-start="98" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867" />
+        <state line="5" column="12" selection-start="98" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/playground.py">
@@ -867,20 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" vertical-offset="331" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="41" selection-start="2071" selection-end="2071" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ui/listmodel/qml_games.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="14" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
@@ -890,7 +873,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/listmodel/qml_platforms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="40" selection-start="624" selection-end="624" vertical-scroll-proportion="0.75821596" vertical-offset="0" max-vertical-offset="697">
+        <state line="27" column="33" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1497" column="0" selection-start="59648" selection-end="59648" vertical-scroll-proportion="0.0" vertical-offset="24063" max-vertical-offset="24446">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" vertical-offset="331" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="39" selection-start="2279" selection-end="2279" vertical-scroll-proportion="2.4856396" vertical-offset="0" max-vertical-offset="1122">
           <folding />
         </state>
       </provider>

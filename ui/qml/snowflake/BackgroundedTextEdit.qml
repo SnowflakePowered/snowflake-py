@@ -53,6 +53,8 @@ Rectangle{
                 wrapMode: TextEdit.Wrap
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
+                focus: false
+                readOnly: true
                 anchors{
                     right: textBackground.right
                     top: textBackground.top

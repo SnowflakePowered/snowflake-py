@@ -2,24 +2,21 @@ import QtQuick 2.0
 
 ListView {
 	signal platformChanged(var platform)
-
 	id: platformList
     focus: false
 	orientation: "Horizontal"
     interactive: true
 	onCurrentIndexChanged:{
-		platformChanged(platformList.currentItem.selectedPlatform.platform);
+        platformChanged(platformList.currentItem.selectedPlatform.platform);
 	}
 
 	delegate: Component {
-		Rectangle {
+        Rectangle {
+            property variant selectedPlatform: model
 			id: platformTab
             width: (ListView.count > 5) ? platformList.width / 5 :  platformList.width / platformList.count
             height: parent.height - 5
-			property variant selectedPlatform: model
-
-
-			color: ListView.isCurrentItem ? "#5A9FD6" : "white"
+            color: ListView.isCurrentItem ? "#5A9FD6" : "white"
 			Text {
 
 				id: platformTitle
