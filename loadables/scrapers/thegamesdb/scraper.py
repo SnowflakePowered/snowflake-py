@@ -12,6 +12,7 @@ import os
 import yaml
 import scraper
 import constants
+import images
 
 __scrapername__ = "TheGamesDB"
 __scraperauthor__ = ["Angelscry", "ron975"]
@@ -124,7 +125,7 @@ def get_game_datas(game_id):
             genre=gamedata["genre"],
 
                 images={
-                    constants.key_boxarts: boxarts
+                    constants.key_boxarts: images.GameImage.get_remote_image(boxarts).uuid
                 }
         )
     except UnboundLocalError:

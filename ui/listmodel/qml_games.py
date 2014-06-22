@@ -10,7 +10,7 @@ class RunnableGameWrapper(QObject):
         return str(self.game.uuid)
     @pyqtProperty("QString")
     def boxart_url(self):
-        return str(self.game.gameinfo.images['ICELAKE_IMG_GAME_BOXARTS'])
+        return '../../../gameinfo/imagecache/' + str(self.game.gameinfo.images['ICELAKE_IMG_GAME_BOXARTS'])
     @pyqtProperty("QString")
     def title(self):
         return str(self.game.gameinfo.title)

@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf92cace-0292-46d5-84d1-31840663235b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/main.py" afterPath="$PROJECT_DIR$/ui/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/snowflakeui.py" afterPath="$PROJECT_DIR$/ui/snowflakeui.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/games.db" afterPath="$PROJECT_DIR$/games.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gameinfo/games.db" afterPath="$PROJECT_DIR$/gameinfo/games.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/constants.py" afterPath="$PROJECT_DIR$/constants.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images.py" afterPath="$PROJECT_DIR$/images.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playground.py" afterPath="$PROJECT_DIR$/playground.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/listmodel/qml_games.py" afterPath="$PROJECT_DIR$/ui/listmodel/qml_games.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py" afterPath="$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="snowflake.iws" />
@@ -16,8 +21,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/snowflake$playground.coverage" NAME="playground Coverage Results" MODIFIED="1397864968832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/snowflake$main.coverage" NAME="main Coverage Results" MODIFIED="1398063021865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
+    <SUITE FILE_PATH="coverage/snowflake$playground.coverage" NAME="playground Coverage Results" MODIFIED="1403453783630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/snowflake$main.coverage" NAME="main Coverage Results" MODIFIED="1403454155755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -39,38 +44,45 @@
       <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="20" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="935">
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="snowflakeui.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ui/snowflakeui.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="27" selection-start="327" selection-end="327" vertical-scroll-proportion="0.47887325" vertical-offset="0" max-vertical-offset="748">
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_pydev_execfile.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="714">
+            <state line="39" column="12" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="816">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pydevd.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <file leaf-file-name="snowflakeui.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui/snowflakeui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1497" column="0" selection-start="59648" selection-end="59648" vertical-scroll-proportion="0.0" vertical-offset="25449" max-vertical-offset="25568">
+            <state line="12" column="27" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="images.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="0" selection-start="1360" selection-end="1361" vertical-scroll-proportion="0.0" vertical-offset="441" max-vertical-offset="867">
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameInfo.qml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui/qml/snowflake/GameInfo.qml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="15" selection-start="1892" selection-end="1892" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1496">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="snowflake.qml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ui/qml/snowflake/snowflake.qml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.1126761" vertical-offset="1326" max-vertical-offset="2737">
               <folding />
             </state>
           </provider>
@@ -79,45 +91,38 @@
       <file leaf-file-name="qml_games.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/listmodel/qml_games.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="14" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="986">
+            <state line="12" column="16" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="qml_platforms.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/listmodel/qml_platforms.py">
+      <file leaf-file-name="playground.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playground.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="33" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="697">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="database.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1445">
+            <state line="45" column="0" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="867">
               <folding>
-                <marker date="1398035387594" expanded="true" signature="307:949" placeholder="CREATE TABLE..games..." />
+                <element signature="e#35#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="identifiers.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/identifiers.py">
+      <file leaf-file-name="platforms.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platforms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-              <folding />
+            <state line="19" column="0" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="765">
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="games" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/fda7fe96/aefa666e-d463-4565-b8df-3c2a1da5a2ee/">
+      <file leaf-file-name="games.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/games.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="16" selection-start="0" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+            <state line="37" column="49" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -126,7 +131,7 @@
       <file leaf-file-name="scraper.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="1761" selection-end="1761" vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="2346">
+            <state line="128" column="17" selection-start="5688" selection-end="5688" vertical-scroll-proportion="0.0" vertical-offset="1869" max-vertical-offset="2346">
               <folding />
             </state>
           </provider>
@@ -151,22 +156,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/ui/qml/snowflake/snowflake.qml" />
         <option value="$PROJECT_DIR$/loadables/platforms/SEGA_GEN.yml" />
         <option value="$PROJECT_DIR$/loadables/platforms/ATARI_2600.yml" />
         <option value="$PROJECT_DIR$/loadables/platforms/NINTENDO_SNES.yml" />
         <option value="$PROJECT_DIR$/loadables/platforms/NINTENDO_NES.yml" />
-        <option value="$PROJECT_DIR$/playground.py" />
-        <option value="$PROJECT_DIR$/ui/listmodel/qml_games.py" />
-        <option value="$PROJECT_DIR$/constants.py" />
         <option value="$PROJECT_DIR$/games.py" />
-        <option value="$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py" />
-        <option value="$PROJECT_DIR$/images.py" />
         <option value="$PROJECT_DIR$/database.py" />
         <option value="$PROJECT_DIR$/ui/listmodel/qml_platforms.py" />
-        <option value="db-console:/fda7fe96/aefa666e-d463-4565-b8df-3c2a1da5a2ee/" />
         <option value="$PROJECT_DIR$/ui/snowflakeui.py" />
         <option value="$PROJECT_DIR$/ui/main.py" />
+        <option value="$PROJECT_DIR$/constants.py" />
+        <option value="$PROJECT_DIR$/images.py" />
+        <option value="db-console:/fda7fe96/aefa666e-d463-4565-b8df-3c2a1da5a2ee/" />
+        <option value="$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py" />
+        <option value="$PROJECT_DIR$/playground.py" />
+        <option value="$PROJECT_DIR$/ui/qml/snowflake/GameInfo.qml" />
+        <option value="$PROJECT_DIR$/ui/listmodel/qml_games.py" />
       </list>
     </option>
   </component>
@@ -367,17 +372,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef/bin/git.exe" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -523,9 +528,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -547,6 +549,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -718,30 +723,34 @@
       <created>1398059087808</created>
       <updated>1398059087808</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="move more UI stuff into a class">
+      <created>1398063048164</created>
+      <updated>1398063048164</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3900135" sideWeight="0.2575" order="11" side_tool="true" content_ui="tabs" x="806" y="463" width="528" height="455" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4480432" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.221875" sideWeight="0.55195683" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6099865" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22125" sideWeight="0.6099865" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4480432" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.221875" sideWeight="0.55195683" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3900135" sideWeight="0.7425" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -775,113 +784,27 @@
     <MESSAGE value="gamesListModel now accessible by platform_id index." />
     <MESSAGE value="begin to refactor ui into a subclassable superclass" />
     <MESSAGE value="Move main UI into a subclass of the SnowflakeUI class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move main UI into a subclass of the SnowflakeUI class" />
+    <MESSAGE value="move more UI stuff into a class" />
+    <option name="LAST_COMMIT_MESSAGE" value="move more UI stuff into a class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py</url>
-          <line>116</line>
+          <line>117</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py</url>
-          <line>131</line>
+          <line>132</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/playground.py</url>
-          <line>21</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="108" />
+      <option name="time" value="109" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/loadables.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="12" selection-start="98" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playground.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="57" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/games.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="68" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scrapermap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/fda7fe96/aefa666e-d463-4565-b8df-3c2a1da5a2ee/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="16" selection-start="0" selection-end="39" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="119">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/identifiers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="471">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="1377">
-          <folding>
-            <marker date="1398035387594" expanded="true" signature="307:949" placeholder="CREATE TABLE..games..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1761" selection-end="1761" vertical-scroll-proportion="0.0" vertical-offset="706" max-vertical-offset="2329">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/listmodel/qml_games.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="14" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ui/listmodel/qml_platforms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="33" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1497" column="0" selection-start="59648" selection-end="59648" vertical-scroll-proportion="0.0" vertical-offset="24063" max-vertical-offset="24446">
@@ -896,21 +819,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ui/main.py">
+    <entry file="file://$PROJECT_DIR$/constants.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="20" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="935">
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state line="6" column="0" selection-start="375" selection-end="375" vertical-scroll-proportion="0.23943663" vertical-offset="0" max-vertical-offset="426">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python33/Lib/json/decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="369" column="0" selection-start="13008" selection-end="13008" vertical-scroll-proportion="0.0" vertical-offset="5941" max-vertical-offset="6324">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/snowflakeui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="327" selection-end="327" vertical-scroll-proportion="0.47887325" vertical-offset="0" max-vertical-offset="748">
+        <state line="12" column="27" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loadables/scrapers/thegamesdb/scraper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="17" selection-start="5688" selection-end="5688" vertical-scroll-proportion="0.0" vertical-offset="1869" max-vertical-offset="2346">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/fda7fe96/aefa666e-d463-4565-b8df-3c2a1da5a2ee/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="3" selection-start="0" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="12" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playground.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="867">
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#35#46#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="27" selection-start="261" selection-end="261" vertical-scroll-proportion="0.08215962" vertical-offset="152" max-vertical-offset="1445">
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1398035387594" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..games..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="765">
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/games.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="49" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1360" selection-end="1361" vertical-scroll-proportion="0.0" vertical-offset="441" max-vertical-offset="867">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/listmodel/qml_games.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="16" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/qml/snowflake/GameInfo.qml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="15" selection-start="1892" selection-end="1892" vertical-scroll-proportion="0.0" vertical-offset="1070" max-vertical-offset="1496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/qml/snowflake/snowflake.qml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.1126761" vertical-offset="1326" max-vertical-offset="2737">
+          <folding />
         </state>
       </provider>
     </entry>

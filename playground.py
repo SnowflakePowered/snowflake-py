@@ -11,6 +11,7 @@ from loadables import Loadables
 from platforms import EmulatorInfo
 import platformids
 from scraper import ScraperInfo
+import database
 
 
 def serialize():
@@ -24,18 +25,21 @@ def serialize():
     return data
 
 def dab():
-    db = gameinfo.GamesDatabase(os.path.dirname(__file__))
+    db = database.GamesDatabase(os.path.dirname(__file__))
     db.create_database()
     db.add_game(serialize(), "ali.smc")
 
+import images
+
 def main():
-    loadables = Loadables.Instance()
-    db = gameinfo.GamesDatabase(os.path.dirname(__file__))
-    dab()
-    game = db.get_game('mTbUQtQz8eYowBqV6o62uj')
+  #  loadables = Loadables.Instance()
+  #  db = gameinfo.GamesDatabase(os.path.dirname(__file__))
+   # dab()
+   # game = db.get_game('mTbUQtQz8eYowBqV6o62uj')
     #game.run()
-    games = db.get_games_for_platform("NINTENDO_SNES")
-    games[2].run()
+   # games = db.get_games_for_platform("NINTENDO_SNES")
+   # games[2].run()
     #snes = loadables.platforms["NINTENDO_SNES"]
     #loadables.emulators["retroarch"].execute_rom(snes.commandline, "smw.smc")
-main()
+    image = images.GameImage.get_remote_image('http://thegamesdb.net/banners/boxart/original/front/1318-1.jpg')
+    print (image.cachepath)
