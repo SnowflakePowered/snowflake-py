@@ -5,138 +5,100 @@ import QtQuick.Layouts 1.1
 ApplicationWindow{
 
     Rectangle{
-        states: [
-
-            State {
-                    name: "open"; when: mouseArea.pressed
-                    PropertyChanges { target: platformSelectorWrapper; height: 130 }
-              }
-        ]
-        transitions: Transition {
-            to: "open"
-            reversible: true
-            NumberAnimation { properties: "height"; easing.type: Easing.InOutQuad }
-        }
-
-
-
             id: platformSelectorWrapper
             objectName: "platformSelectorWrapper"
             color: "#5A9FD6"
-            height: 0
+            height: 100
             z: 1000
             anchors.right: parent.right
             anchors.rightMargin: 0
             anchors.left: parent.left
             anchors.leftMargin: 0
+            anchors.bottom: gamesList.top
+            anchors.bottomMargin: 0
+            ListModel {
+                id: menuModel
+
+                ListElement {
+                    name: "Games"
+                }
+                ListElement {
+                    name: "Consoles"
+                }
+            }
+
+            ListView {
+                id: menuList
+                focus: false
+                orientation: "Horizontal"
+                interactive: true
+                anchors.fill: parent
+                model: menuModel
+                delegate: Component {
+                    Rectangle {
+                        id: platformTab
+                        width: (ListView.count > 5) ? menuList.width / 5 :  menuList.width / menuList.count
+                        height: parent.height - 5
+                        color: ListView.isCurrentItem ? "#5A9FD6" : "white"
+                        Text {
+
+                            id: menuSelect
+                            elide: Text.ElideRight
+                            text: model.name
+                            font.family: "Roboto"
+                            font.weight: Font.Light
+                            font.pointSize: 12
+                            anchors.leftMargin: 10
+                            anchors.rightMargin: 10
+                            anchors.bottomMargin: 5
+                            anchors.fill: parent
+                            verticalAlignment: Text.AlignBottom
+                            horizontalAlignment: Text.AlignRight
+                            color: platformTab.ListView.isCurrentItem ? "white": "black"
+                        }
+
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                menuList.currentIndex = index;
+                            }
+                        }
+                    }
+                }
+
+            }
+
             PlatformList{
                 id: platformSelector
                 objectName: "platformSelector"
                 model: platformListModel
-                anchors.fill: parent
                 onPlatformChanged:
                 {
-                    gamesList.model =  gamesListModel[platform.platform_id]
+                    gamesList.gamesModel =  gamesListModel[platform.platform_id]
                     console.log(platform.platform_id)
                 }
             }
 
         }
 
-    Rectangle{
-        Keys.onPressed: {
-            if (event.key === Qt.Key_C) {
-                if (platformSelectorWrapper.state === 'open'){
-                    platformSelectorWrapper.state = ''
-                }else{
-                    platformSelectorWrapper.state = 'open'
+Rectangle{
+    anchors{
+        top: parent.top
+        left: parent.left
+        bottom: parent.bottom
+        right: parent.right
+        topMargin: 100
+        leftMargin: 0
+        bottomMargin: 0
+        rightMargin: 0
+    }
 
-                }
-            }
-        }
-
-
-            id: gameAreaWrapper
-            color: "lightsteelblue"
-            anchors.fill: parent
-
-            Rectangle{
-                id: gameListWrapper
-                anchors{
-                    top: parent.top
-                    left: parent.left
-                    bottom: parent.bottom
-
-                    topMargin: 0
-                    leftMargin: 0
-                    bottomMargin: 0
-                }
-               width: 350
-               color: "lightgrey"
-               ListView {
-                   id: gamesList
-                   objectName: "gamesList"
-                   width: parent.width
-                   height: 300
-                   focus: true
-                   interactive: true
-
-                   model: gamesListModel[platformSelector.currentItem.selectedPlatform.platform_id]
-                   signal gameChanged(var game)
-                   onCurrentIndexChanged:{
-                       gameChanged(gamesList.currentItem.selectedGame.game);
-                   }
-                   onGameChanged:{
-                       gameInfo.textGameTitle = qsTr(game.title)
-                       gameInfo.textGameDescription = qsTr(game.description)
-                       gameInfo.textGameShortInfo= qsTr(game.infobox)
-                       gameInfo.boxartUrl = qsTr(game.boxart_url)
-
-                   }
-
-                   delegate: Component {
-                       Rectangle {
-                           width: gamesList.width
-                           height: 40
-                           color: ListView.isCurrentItem ? "#5A9FD6" : "lightgrey"
-                           property variant selectedGame: model
-                           Text {
-                               id: title
-                               elide: Text.ElideRight
-                               text: model.game.title
-                               color: "white"
-                               font.bold: true
-                               anchors.leftMargin: 10
-                               anchors.fill: parent
-                               verticalAlignment: Text.AlignVCenter
-                               font.family: "Roboto"
-                           }
-                           MouseArea {
-                               anchors.fill: parent
-                               onClicked: {
-                                   gamesList.focus = true;
-                                   gamesList.currentIndex = index;
-                               }
-                           }
-                       }
-                   }
-               }
-            }
-             GameInfo{
-                 id: gameInfo
-                 anchors{
-                     top: parent.top
-                     left: gameListWrapper.right
-                     bottom: parent.bottom
-                     right: parent.right
-
-                     rightMargin: 0
-                     topMargin: 0
-                     leftMargin: 0
-                     bottomMargin: 0
-                 }
-             }
-         }
+    GamesListView{
+        id: gamesList
+        gamesModel: gamesListModel[platformSelector.currentItem.selectedPlatform.platform_id]
+    }
+}
     title: "Snowflake"
     width: 1280
     height: 720
